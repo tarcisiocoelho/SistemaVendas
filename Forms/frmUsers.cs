@@ -38,7 +38,8 @@ namespace SistemaVendas.Forms
         userDados dados = new userDados();
 
         private void btnCadastrar_Click(object sender, EventArgs e)
-        {         
+        {
+            bool success = false;
             user.primeiro_nome = txtPrimeiroNome.Text;
             user.sobrenome = txtSobrenome.Text;
             user.email = txtEmail.Text;
@@ -51,20 +52,31 @@ namespace SistemaVendas.Forms
             user.cadastro_data = DateTime.Now;
             user.cadastrado_por = 1;          
 
-            bool success = dados.Insert(user);
-
-            if (success == true)
+            if (string.IsNullOrEmpty(txtPrimeiroNome.Text))
             {
-                MessageBox.Show("Usuário cadastrado com sucesso");
+                MessageBox.Show("Insira um nome");
+                txtPrimeiroNome.Focus();
+            }
+            else if(string.IsNullOrEmpty(txtUser.Text))
+            {
+                MessageBox.Show("Insira um usuário");
+            }
+            else if(string.IsNullOrEmpty(txtSenha.Text))
+            {
+                MessageBox.Show("Insira uma senha");
             }
             else
             {
-                MessageBox.Show("Erro ao cadastrar");
+                success = dados.Insert(user);
+            }
+
+            if(success == true)
+            {
+                Limpar();
             }
 
             DataTable dt = dados.Select();
-            dgvUser.DataSource = dt;
-            Limpar();
+            dgvUser.DataSource = dt;            
         }
 
         private void frmUsers_Load(object sender, EventArgs e)
@@ -157,7 +169,7 @@ namespace SistemaVendas.Forms
             bool success = dados.Delete(user);
             if (success == true)
             {
-                MessageBox.Show("Usuário deletado");
+                MessageBox.Show("Deletado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

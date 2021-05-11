@@ -92,7 +92,7 @@ namespace SistemaVendas
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(13, 51);
+            this.lblUser.Location = new System.Drawing.Point(10, 35);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(35, 13);
             this.lblUser.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace SistemaVendas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 49);
+            this.label1.Location = new System.Drawing.Point(51, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 15);
             this.label1.TabIndex = 2;
@@ -112,11 +112,11 @@ namespace SistemaVendas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(592, 374);
+            this.label2.Location = new System.Drawing.Point(414, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 24);
+            this.label2.Size = new System.Drawing.Size(178, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "SISTEMA DE VENDAS";
+            this.label2.Text = "ADMINISTRADOR";
             // 
             // panel1
             // 
@@ -132,7 +132,7 @@ namespace SistemaVendas
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(668, 33);
+            this.label3.Location = new System.Drawing.Point(447, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 13);
             this.label3.TabIndex = 0;
@@ -142,6 +142,7 @@ namespace SistemaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(999, 494);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -151,8 +152,7 @@ namespace SistemaVendas
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Formulário Administrador";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
